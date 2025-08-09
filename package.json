@@ -1,0 +1,86 @@
+{
+  "name": "coalescifn",
+  "version": "0.0.1",
+  "description": "Coalesce function calls while running.",
+  "license": "MIT",
+  "author": {
+    "name": "Xiao Hanyu",
+    "email": "xiaohanyu1988@gmail.com",
+    "url": "https://github.com/xiaohanyu"
+  },
+  "keywords": [
+    "coalesce",
+    "debounce",
+    "throttle",
+    "async",
+    "promise",
+    "utility",
+    "concurrency",
+    "rate-limit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaohanyu/coalescifn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaohanyu/coalescifn/issues"
+  },
+  "homepage": "https://github.com/xiaohanyu/coalescifn",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "build:clean": "rm -rf dist",
+    "build:prod": "tsup --dts --minify --sourcemap",
+    "check": "pnpm check:biome --write && pnpm check:tsc",
+    "check:tsc": "pnpm -r exec tsc --noEmit",
+    "check:biome": "pnpm biome check --unsafe src",
+    "commitlint": "commitlint --edit",
+    "dev": "vitest",
+    "test": "vitest --run",
+    "test:cov": "vitest --coverage --run",
+    "test:watch": "vitest --watch",
+    "prepare": "husky",
+    "publish:all": "pnpm build:prod && pnpm publish --no-git-checks",
+    "release": "commit-and-tag-version --bumpFiles package.json"
+  },
+  "lint-staged": {
+    "src/**/*.ts": "pnpm check"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.4",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "commit-and-tag-version": "^12.5.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.0",
+    "vitest": "^3.1.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  },
+  "packageManager": "pnpm@10.12.1"
+}

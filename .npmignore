@@ -1,0 +1,10 @@
+node_modules
+dist/*.map
+coverage
+*.log
+src/**/*.test.ts
+.DS_Store
+.vscode
+.idea
+
+
