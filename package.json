@@ -1,6 +1,6 @@
 {
   "name": "coalescifn",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Coalesce function calls while running.",
   "license": "MIT",
   "author": {
