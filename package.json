@@ -20,12 +20,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaohanyu/coalescifn.git"
+    "url": "https://github.com/yamlresume/coalescifn.git"
   },
   "bugs": {
-    "url": "https://github.com/xiaohanyu/coalescifn/issues"
+    "url": "https://github.com/yamlresume/coalescifn/issues"
   },
-  "homepage": "https://github.com/xiaohanyu/coalescifn",
+  "homepage": "https://github.com/yamlresume/coalescifn",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
